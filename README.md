@@ -2,6 +2,7 @@
 ## About
 Atom is a communication portal that helps us in recording and maintaining all the team events/projects.
 We also have a user management portal where there are 4 roles. User, member, admin, super admin. People can be promoted/demoted between these roles.
+
 ## Table of content 
  1. *Feature*
  2. *Demo*
@@ -12,10 +13,7 @@ We also have a user management portal where there are 4 roles. User, member, adm
  5. *Road map*
  6. *Feedback* 
 
-
  ###     Features
-
-
 **Member-**
 1. They can preview the upcoming task
 2. They can mark their progress in the task that is assigned in the porta
