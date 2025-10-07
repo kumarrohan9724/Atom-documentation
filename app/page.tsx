@@ -33,11 +33,10 @@ export default function Home() {
           >
             <h2 className="text-3xl md:text-4xl mb-6">The Art of Visual Storytelling</h2>
             <p className="text-primary-secondary mb-6">
-              Every photograph tells a story, captures an emotion, and preserves a moment in time. My work focuses on
-              finding beauty in both grand landscapes and subtle details.
+          Every photograph tells a story, captures an emotion, and preserves a moment in time. My work focuses on finding beauty in both grand landscapes and subtle details.
             </p>
             <p className="text-primary-secondary mb-8">
-              Explore my collections from around the world, each with its own unique perspective and narrative.
+             Get to know me, and see how I capture moments perfectly, turning fleeting instants into lasting memories.
             </p>
             <AnimatedButton href="/about" variant="outline" icon={<ArrowRight size={16} />}>
               Learn More About The Journey
@@ -51,7 +50,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <Image
-              src="/Morocco/morocco-9.webp?height=1000&width=800"
+              src="/covers/Img2.jpg"
               alt="Photographer at work"
               fill
               className="object-cover"
@@ -85,35 +84,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Featured Collections */}
-      <section className="lg:mt-32 mb-32 px-4 md:px-8 z-10 mt-20">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-primary text-3xl md:text-4xl mb-4">Featured Collections</h2>
-            <p className="text-primary max-w-2xl mx-auto">
-              Explore some of my most popular photography collections from around the world
-            </p>
-          </motion.div>
-          <FeaturedCollections />
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <AnimatedButton href="/showcase" variant="primary" icon={<ArrowRight size={18} />}>
-              View All Collections
-            </AnimatedButton>
-          </motion.div>
-        </div>
-      </section>
+    
     </div>
   )
 }

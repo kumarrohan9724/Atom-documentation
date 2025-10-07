@@ -30,13 +30,13 @@ export default function Error({
           We apologize for the inconvenience. Please try again or return to the homepage.
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center">
-          <AnimatedButton
+          {/* <AnimatedButton
             onClick={reset}
             variant="outline"
             icon={<ArrowLeft size={16} />}
           >
             Try again
-          </AnimatedButton>
+          </AnimatedButton> */}
           <AnimatedButton
             href="/"
             variant="outline"

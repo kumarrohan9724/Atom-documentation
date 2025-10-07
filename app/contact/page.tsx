@@ -1,10 +1,9 @@
 "use client"
 
 import Image from "next/image"
-import { Mail, MapPin, Phone, Instagram, Twitter, Facebook, Youtube, Linkedin, Github } from "lucide-react"
-import { ContactForm } from "@/components/contact-form"
+import { Mail, MapPin, Phone, Instagram, Facebook, Globe } from "lucide-react" // Added Globe, removed unneeded
 import { motion } from "framer-motion"
-import FeaturedCollections from "@/components/featured-collections"
+// Removed FeaturedCollections import
 import AnimatedButton from "@/components/animated-button"
 import { ArrowRight } from "lucide-react"
 
@@ -15,11 +14,11 @@ export default function ContactPage() {
       {/* Spacer for header
       <div className="header-height"></div> */}
 
-       {/* Hero Section */}
+      {/* Hero Section */}
       <section className="relative h-[50vh] w-full">
         <Image
-          src="/new zealand/new-zealand-17.jpg?height=800&width=1920"
-          alt="Contact X100"
+          src="/covers/Img3.jpg"
+          alt="Contact Chayachobi"
           fill
           priority
           className="object-cover"
@@ -68,12 +67,17 @@ export default function ContactPage() {
                 {
                   icon: <Mail className="text-primary mt-1" size={20} />,
                   title: "Email",
-                  content: "contact@x100.com",
+                  content: "chayachobi2022@gmail.com",
+                },
+                {
+                    icon: <Phone className="text-primary mt-1" size={20} />,
+                    title: "Phone",
+                    content: "+91 9064142143",
                 },
                 {
                   icon: <MapPin className="text-primary mt-1" size={20} />,
                   title: "Location",
-                  content: "31.9514° S, 115.8617° E",
+                  content: "Katwa, Purba Barddhaman, 713130",
                 },
               ].map((item) => (
                 <motion.div
@@ -101,12 +105,8 @@ export default function ContactPage() {
               <h3 className="text-xl mb-4">Keep Up To Date</h3>
               <div className="flex flex-wrap gap-1">
                 {[
-                  { icon: <Instagram size={26} />, label: "Instagram", href: "https://github.com/lilxyzz" },
-                  { icon: <Twitter size={26} />, label: "Twitter", href: "https://github.com/lilxyzz" },
-                  { icon: <Facebook size={26} />, label: "Facebook", href: "https://github.com/lilxyzz" },
-                  { icon: <Youtube size={26} />, label: "Youtube", href: "https://github.com/lilxyzz" },
-                  // { icon: <Linkedin size={20} />, label: "Linkedin", href: "https://linkedin.com" },
-                  { icon: <Github size={26} />, label: "Github", href: "https://github.com/lilxyzz" },
+                  { icon: <Instagram size={26} />, label: "Instagram", href: "https://www.instagram.com/chayachobi_india/" },
+                  { icon: <Facebook size={26} />, label: "Facebook", href: "https://www.facebook.com/Chayachobi07/" },
                 ].map((item) => (
                   <motion.a
                     key={item.label}
@@ -118,22 +118,30 @@ export default function ContactPage() {
                     whileTap={{ scale: 0.95 }}
                   >
                     {item.icon}
-                    {/* <span className="text-primary-foreground dark:text-primary-foreground">{item.label}</span> */}
                   </motion.a>
                 ))}
               </div>
             </motion.div>
           </motion.div>
 
-          <motion.div
-            className="bg-primary dark:bg-primary-foreground p-8 rounded-2xl shadow-sm border border-border"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h2 className="text-2xl mb-6">Send a Message</h2>
-            <ContactForm />
-          </motion.div>
+          {/* This is the new section with the Globe icon */}
+         <motion.div
+  className="flex items-center justify-center"
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6, delay: 0.2, type: "spring", stiffness: 120 }}
+>
+  <div className="relative w-full max-w-md h-[400px] rounded-xl overflow-hidden shadow-2xl border border-gray-200">
+    <Image
+      src="/covers/Img1.jpg"
+      alt="Contact Chayachobi"
+      fill
+      className="object-cover transition-transform duration-500 hover:scale-105"
+      priority
+    />
+  </div>
+</motion.div>
+
         </div>
       </section>
 
@@ -155,7 +163,7 @@ export default function ContactPage() {
               {
                 question: "Do you offer prints of your photographs?",
                 answer:
-                  "Yes, most of my photographs are available as fine art prints. You can inquire about specific images through the contact form.",
+                  "Yes, most of my photographs are available as fine art prints. You can inquire about specific images through my social media channels or by email.",
               },
               {
                 question: "Are you available for commercial photography?",
@@ -165,7 +173,7 @@ export default function ContactPage() {
               {
                 question: "Do you offer photography workshops?",
                 answer:
-                  "Yes, I regularly host workshops both in-person and online. Join my newsletter to be notified when new workshop dates are announced.",
+                  "Yes, I regularly host workshops both in-person and online. Follow me on social media to be notified when new workshop dates are announced.",
               },
               {
                 question: "Can I license your photos for my website/publication?",
@@ -188,35 +196,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-        {/* Featured Collections */}
-      <section className="mt-20 mb-20 py-20 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl mb-4">Featured Collections</h2>
-            <p className="text-primary max-w-2xl mx-auto">
-              Explore some of my most popular photography collections from around the world
-            </p>
-          </motion.div>
-          <FeaturedCollections />
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <AnimatedButton href="/showcase" variant="primary" icon={<ArrowRight size={18} />}>
-              View All Collections
-            </AnimatedButton>
-          </motion.div>
-        </div>
-      </section>
+      {/* Featured Collections section has been removed */}
     </div>
   )
 }

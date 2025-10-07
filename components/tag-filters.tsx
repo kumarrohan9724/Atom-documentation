@@ -19,7 +19,7 @@ export default function TagFilters() {
       params.set("tag", tag)
     }
 
-    router.push(`/showcase?${params.toString()}`)
+  // router.push(`/showcase?${params.toString()}`)
   }
 
   return (

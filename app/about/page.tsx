@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { ArrowRight, Camera, Globe, Award, Users } from "lucide-react"
+import { ArrowRight, Camera, Award, Users, Heart } from "lucide-react"
 import { motion } from "framer-motion"
 import AnimatedButton from "@/components/animated-button"
 
@@ -11,8 +11,8 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] w-full">
         <Image
-          src="/Iceland/iceland-7.jpg?height=800&width=1920"
-          alt="About X100"
+          src="/covers/Img7.jpg"
+          alt="About Chayachobi"
           fill
           priority
           className="object-cover"
@@ -24,8 +24,8 @@ export default function AboutPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl text-white mb-4">About Me</h1>
-          <p className="text-white/90 text-lg max-w-2xl">The story behind the lens</p>
+          <h1 className="text-4xl md:text-5xl text-white mb-4">About Chayachobi</h1>
+          <p className="text-white/90 text-lg max-w-2xl">Where every frame tells a story.</p>
         </motion.div>
       </section>
       <div className="header-height"></div>
@@ -41,7 +41,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <Image
-              src="/Iceland/iceland-12.jpg?height=1200&width=800"
+              src="/covers/Img3.jpg"
               alt="Photographer portrait"
               fill
               className="object-cover"
@@ -53,36 +53,37 @@ export default function AboutPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl mb-6">The Journey</h2>
+            <h2 className="text-3xl md:text-4xl mb-6">Our Story</h2>
             <p className="text-primary mb-4">
-              I'm a professional photographer with over 10 years of experience capturing moments around the world. My
-              passion for photography began during a backpacking trip through Southeast Asia, where I discovered the
-              power of visual storytelling.
+              Welcome to Chayachobi. Founded in 2022, our journey began with a simple yet profound love for capturing
+              fleeting moments and transforming them into timeless memories. We are storytellers at heart, dedicated to
+              the art of visual narrative.
             </p>
             <p className="text-primary mb-4">
-              Since then, I've traveled to over 30 countries, documenting landscapes, cultures, and urban environments.
-              My work has been featured in publications like National Geographic, Condé Nast Traveler, and Vogue.
+              We believe every picture holds a piece of time — a reflection of beauty, culture, and the raw emotions
+              that define our lives. Our passion is to find these stories in every click of the shutter, preserving
+              them with the care and artistry they deserve.
             </p>
             <p className="text-primary mb-6">
-              I believe that photography has the power to connect people across cultures and inspire a deeper
-              appreciation for our world. Each image I create aims to tell a story and evoke emotion.
+              From the quiet intimacy of personal portraits to the vibrant energy of grand celebrations, our mission is
+              to create images that resonate deeply and stay close to the heart for generations to come.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2">
                 <Camera size={20} className="text-primary" />
-                <span className="text-primary">Fujifilm x100vi & Leica M10</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Globe size={20} className="text-primary" />
-                <span className="text-primary">30+ Countries</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award size={20} className="text-primary" />
-                <span className="text-primary">Award-winning</span>
+                <span className="text-primary">High-End Digital & Film</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users size={20} className="text-primary" />
-                <span className="text-primary">Workshops & Mentoring</span>
+                <span className="text-primary">Portraits & Celebrations</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Heart size={20} className="text-primary" />
+                <span className="text-primary">Passion-Driven Approach</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award size={20} className="text-primary" />
+                <span className="text-primary">5-Star Client Reviews</span>
               </div>
             </div>
           </motion.div>
@@ -99,24 +100,24 @@ export default function AboutPage() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            My Philosophy
+            Our Philosophy
           </motion.h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Authenticity",
+                title: "Emotion",
                 description:
-                  "I believe in capturing authentic moments that tell real stories. My approach focuses on finding beauty in truth rather than manufacturing perfect scenes.",
+                  "Our primary focus is to capture the genuine emotion of a moment. We seek the unscripted laughs, the quiet tears, and the heartfelt glances that tell the real story.",
+              },
+              {
+                title: "Timelessness",
+                description:
+                  "We create images that transcend trends. Our editing and composition style is classic and clean, ensuring your memories feel as fresh in 30 years as they do today.",
               },
               {
                 title: "Connection",
                 description:
-                  "Photography creates connections - between viewer and subject, between cultures, and between people. I strive to foster these connections through my work.",
-              },
-              {
-                title: "Respect",
-                description:
-                  "I approach every environment and subject with deep respect. This means respecting cultures, natural spaces, and the stories I'm privileged to capture.",
+                  "Photography is a collaboration. We strive to build a genuine connection with you, creating a comfortable space where your true self can shine through the lens.",
               },
             ].map((item, index) => (
               <motion.div
@@ -145,39 +146,33 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          My Journey
+          Our Journey
         </motion.h2>
         <div className="space-y-12">
           {[
             {
-              year: "2013",
-              title: "First Exhibition",
+              year: "2022",
+              title: "The Beginning",
               description:
-                "Hosted my first photography exhibition in New York, featuring landscapes from across North America.",
+                "Chayachobi was founded with a mission to turn moments into timeless memories, starting with local portraits and intimate events.",
             },
             {
-              year: "2015",
-              title: "National Geographic Feature",
+              year: "2023",
+              title: "Expanding Our Canvas",
               description:
-                "My series on indigenous communities was featured in National Geographic, marking a significant milestone in my career.",
+                "We expanded our services to include grand celebrations and brand storytelling, helping more clients preserve their most important milestones.",
             },
             {
-              year: "2018",
-              title: "Photography Book",
+              year: "2024",
+              title: "Studio Opening",
               description:
-                'Published my first photography book, "Perspectives," showcasing a decade of travel photography.',
-            },
-            {
-              year: "2020",
-              title: "Photography Workshops",
-              description:
-                "Began offering photography workshops and mentoring programs to share knowledge and techniques with aspiring photographers.",
+                "Opened our first dedicated studio space, allowing for creative portrait sessions and client consultations in a personalized environment.",
             },
             {
               year: "Present",
-              title: "Ongoing Projects",
+              title: "Continuing the Story",
               description:
-                "Currently working on long-term documentary projects focused on environmental conservation and cultural preservation.",
+                "We continue to innovate and grow, constantly seeking new ways to frame the beauty of life while staying true to our core mission of heartfelt storytelling.",
             },
           ].map((item, index) => (
             <motion.div
@@ -209,9 +204,10 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-primary text-3xl md:text-4xl mb-6">Collaborate?</h2>
+          <h2 className="text-primary text-3xl md:text-4xl mb-6">Let's Tell Your Story</h2>
           <p className="text-primary max-w-2xl mx-auto mb-8">
-            Whether you're looking for prints, licensing, or a custom photography project, feel free to get in touch.
+            Whether you're planning a wedding, a family portrait, or need creative content, we would be honored to
+            help you frame your story.
           </p>
           <AnimatedButton href="/contact" variant="primary" icon={<ArrowRight size={18} />}>
             Get in Touch

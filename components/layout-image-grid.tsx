@@ -68,25 +68,25 @@ const cards = [
     id: 1,
     content: <SkeletonOne />,
     className: "md:col-span-2",
-    thumbnail: "/Tokyo/tokyo-22.webp",
+    thumbnail: "/covers/Img9.jpg",
   },
   {
     id: 2,
     content: <SkeletonTwo />,
     className: "col-span-1",
-    thumbnail: "/Urban Portraits/urban-portraits-1.jpg",
+    thumbnail: "/covers/Storytelling.jpg",
   },
   {
     id: 3,
     content: <SkeletonThree />,
     className: "col-span-1",
-    thumbnail: "/new zealand/new-zealand-18.jpg",
+    thumbnail: "/covers/Img4.jpg",
   },
   {
     id: 4,
     content: <SkeletonFour />,
     className: "md:col-span-2",
-    thumbnail: "/Iceland/iceland-1.jpg",
+    thumbnail: "/covers/Img6.jpg",
   },
 ];
 

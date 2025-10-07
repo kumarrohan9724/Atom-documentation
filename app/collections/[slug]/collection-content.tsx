@@ -85,9 +85,9 @@ export function CollectionContent({ collection }: Props) {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <AnimatedButton href="/showcase" variant="primary" icon={<ArrowRight size={18} />}>
+            {/* <AnimatedButton href="/showcase" variant="primary" icon={<ArrowRight size={18} />}>
               View All Collections
-            </AnimatedButton>
+            </AnimatedButton> */}
           </motion.div>
         </div>
       </section>

@@ -1,10 +1,10 @@
-# Next.js Photography Portfolio | X100
+# Chayachobi | Next.js Photography Portfolio
 
-![X100 - Next.js Photography Portfolio](https://github.com/lilxyzz/x100/blob/main/public/X100-cover.webp)
+![Chayachobi - Next.js Photography Portfolio](public/Logo.webp)
 
 A modern, responsive photography portfolio built with Next.js 15+, featuring dynamic collections, smooth animations, and a beautiful dark/light theme.
 
-I created this theme as I’ve been considering purchasing a camera recently, and it aligned with some ideas I wanted to explore. I may contribute further updates in the future, but can’t make any guarantees at this stage. Enjoy 🤙
+Welcome to Chayachobi, where every frame tells a story. Founded in 2022, our journey began with a simple love for capturing moments and turning them into timeless memories. We believe every picture holds a piece of time — a reflection of beauty, culture, and emotion. From intimate portraits to grand celebrations, Chayachobi continues to frame stories that stay close to the heart.
 
 ## 🌟 Features
 

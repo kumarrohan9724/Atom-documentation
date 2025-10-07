@@ -8,11 +8,12 @@ import { motion } from "framer-motion"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 const IMAGES = [
-  "/Morocco/cover.webp",
-  "/new zealand/cover.jpg",
-  "/Tokyo/cover.jpg",
-  "/Bali/cover.jpeg",
-  "/Iceland/cover.jpg",
+  "covers/Cover1.jpg",
+   "covers/Cover2.jpg",
+  "covers/Cover3.jpg",
+  "covers/Cover4.jpg",
+  "covers/Cover5.jpg",
+
 ]
 
 export function HeroGalleryScroll() {
@@ -32,41 +33,40 @@ export function HeroGalleryScroll() {
           </BentoCell>
         ))}
       </BentoGrid>
-
       <ContainerScale className="relative z-10 text-center">
-        <motion.h1
-          className="max-w-xl text-5xl tracking-tighter text-primary text-backdrop-invert"
+        <motion.div
+          className="flex flex-col items-center justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          X100
-        </motion.h1>
+          <span className="inline-flex items-center justify-center w-20 h-20 mb-2">
+            <img src="/Logo.webp" alt="Chayachobi Logo" className="w-20 h-20 object-cover rounded-lg" />
+          </span>
+          <span className="text-5xl font-bold tracking-tighter text-primary">Chayachobi</span>
+        </motion.div>
         <motion.p
-          className="my-6 max-w-xl text-primary "
+          className="my-6 max-w-xl mx-auto text-primary text-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-           A Next.js portfolio for professional photographers, designed to flawlessly showcase powerful visual stories.        </motion.p>
+          Capturing moments, telling stories. Professional photography for every occasion.
+        </motion.p>
         <div className="flex items-center flex-col md:flex-row justify-center gap-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            <AnimatedButton href="/showcase" variant="outline" icon={<ArrowRight size={16} />}>
-              Showcase
-            </AnimatedButton>
-          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <AnimatedButton href="/about" variant="outline" icon={<ArrowRight size={16} />}>
-              About
-            </AnimatedButton>
+            <AnimatedButton href="/about" variant="outline" icon={<ArrowRight size={16} />}>About</AnimatedButton>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+          >
+            <AnimatedButton href="/contact" variant="outline" icon={<ArrowRight size={16} />}>Contact</AnimatedButton>
           </motion.div>
         </div>
       </ContainerScale>

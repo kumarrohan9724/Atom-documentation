@@ -5,7 +5,7 @@
   "author": "Travis Lord <hi@travislord.au>",
   "scripts": {
     "validate-images": "ts-node scripts/validate-images.ts",
-    "dev": "yarn validate-images --dry-run && next dev",
+  "dev": "npm run validate-images --dry-run && next dev",
     "build": "yarn validate-images --dry-run && next build",
     "start": "next start",
     "lint": "next lint",

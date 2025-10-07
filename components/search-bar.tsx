@@ -22,7 +22,7 @@ export default function SearchBar() {
       params.delete("q")
     }
 
-    router.push(`/showcase?${params.toString()}`)
+  // router.push(`/showcase?${params.toString()}`)
   }
 
   return (

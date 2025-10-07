@@ -13,8 +13,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "X100 | Next.js Theme for Photographers",
-  description: "A Next.js portfolio for professional photographers, designed to flawlessly showcase powerful visual stories.",
+  title: "Chayachobi",
+  description: "Event planning & stunning visuals for your special day.",
   // Set initial theme-color meta tag for iOS Safari
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#ffffff' },
@@ -25,6 +25,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <head>
+        <title>Chayachobi</title>
+        <link rel="icon" href="/Logo.webp" type="image/webp" />
+        {/* ...other head tags if needed... */}
+      </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SafariThemeColor />

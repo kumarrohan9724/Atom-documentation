@@ -1,14 +1,13 @@
 "use client"
 
 import Link from "next/link"
-import { Instagram, Twitter, Facebook, Youtube, Linkedin, Github } from "lucide-react"
-import { ThemeToggle } from "./theme-toggle"
+import { Instagram, Facebook, Phone, Mail, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
-import Logo from "./logo"
-import useDisableRightClick from './useDisableRightClick'; // Adjust the import path as necessary
+import { ThemeToggle } from "./theme-toggle"
+import useDisableRightClick from './useDisableRightClick';
 
 export default function Footer() {
-  useDisableRightClick(); // Apply the hook to disable right-click on images
+  useDisableRightClick(); // Disable right-click on images
 
   return (
     <motion.footer
@@ -18,95 +17,57 @@ export default function Footer() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Logo & Description */}
         <motion.div
-          className="md:col-span-2"
+          className="md:col-span-1"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="flex items-center gap-3 mb-4">
-            {/* <Logo /> */}
-            <Link href="/" className="font-old-london text-2xl font-bold inline-block text-foreground">
-              X100
-            </Link>
-          </div>
-          <p className="text-muted-foreground max-w-md mb-6 max-w-xs">
-            Capturing moments and telling stories through the lens. Professional photography services for all your
-            needs.
+          <Link href="/" className="inline-flex items-center mb-4">
+            <img
+              src="/Logo.webp"
+              alt="Chayachobi Logo"
+              className="w-16 h-16 object-cover rounded-full shadow-lg"
+            />
+          </Link>
+          <p className="text-muted-foreground max-w-xs mb-4">
+            Welcome to Chayachobi. Since 2022, we’ve captured moments that turn into timeless memories.
           </p>
-          <div className="flex space-x-4 items-center">
+
+          {/* Social Icons + ThemeToggle */}
+          <div className="flex items-center space-x-4 mt-2">
             <motion.a
-              href="https://github.com/lilxyzz"
+              href="https://www.instagram.com/chayachobi_india/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary transition-colors"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Instagram size={20} />
-              <span className="sr-only">Instagram</span>
+              <Instagram size={28} />
             </motion.a>
             <motion.a
-              href="https://github.com/lilxyzz"
+              href="https://www.facebook.com/Chayachobi07/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary transition-colors"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Twitter size={20} />
-              <span className="sr-only">Twitter</span>
+              <Facebook size={28} />
             </motion.a>
-            <motion.a
-              href="https://github.com/lilxyzz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-primary transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Facebook size={20} />
-              <span className="sr-only">Facebook</span>
-            </motion.a>
-              <motion.a
-                href="https://github.com/lilxyzz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Youtube size={20} />
-                <span className="sr-only">Youtube</span>
-            </motion.a>
-             {/* <motion.a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Linkedin size={20} />
-                <span className="sr-only">Linkedin</span>
-            </motion.a> */}
-             <motion.a
-                href="https://github.com/lilxyzz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Github size={20} />
-                <span className="sr-only">Github</span>
-              </motion.a> 
-            <ThemeToggle />
+
+            {/* Theme toggle button */}
+            <div className="ml-auto">
+              <ThemeToggle />
+            </div>
           </div>
         </motion.div>
 
+        {/* Quick Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -115,11 +76,6 @@ export default function Footer() {
         >
           <h3 className="section-title text-2xl mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li>
-              <Link href="/showcase" className="text-muted-foreground hover:text-primary transition-colors">
-                Showcase
-              </Link>
-            </li>
             <li>
               <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
                 About
@@ -133,6 +89,7 @@ export default function Footer() {
           </ul>
         </motion.div>
 
+        {/* Contact Info with Icons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -140,16 +97,24 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <h3 className="section-title text-2xl mb-4">Contact</h3>
-          <ul className="space-y-2 text-muted-foreground">
-            <h4 className="text-primary">Email</h4>
-            <a href="mailto:contact@x100.com"><li>contact@x100.com</li></a> 
-            {/* <li>Phone: +1 (555) 123-4567</li> */}
-            <h4 className="text-primary">Location</h4>
-            <li>39.1569° S, 175.6321° E</li>
+          <ul className="space-y-3 text-muted-foreground">
+            <li className="flex items-center gap-2">
+              <Phone size={20} className="text-primary" /> 9064142143
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail size={20} className="text-primary" /> 
+              <a href="mailto:chayachobi2022@gmail.com" className="hover:text-primary">
+                chayachobi2022@gmail.com
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <MapPin size={20} className="text-primary" /> Katwa, Purba Barddhaman, 713130
+            </li>
           </ul>
         </motion.div>
       </div>
 
+      {/* Footer bottom */}
       <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-border">
         <motion.p
           className="text-center text-muted-foreground text-sm"
@@ -158,8 +123,7 @@ export default function Footer() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          © {new Date().getFullYear()} <Link href="https://travislord.xyz" target="_blank"
-                rel="noopener noreferrer" className="hover:text-primary transition-colors">TL</Link>. All rights reserved. 🕸️
+          © {new Date().getFullYear()} Chayachobi. All rights reserved.
         </motion.p>
       </div>
     </motion.footer>

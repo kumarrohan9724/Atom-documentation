@@ -10,7 +10,6 @@ import Logo from "./logo"
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Showcase", href: "/showcase" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ]
@@ -69,14 +68,10 @@ export default function Header() {
         <div className="flex justify-between items-center h-full">
           {/* Logo and Brand */}
           <div className="flex-shrink-0 flex items-center gap-3">
-            {/* <Logo /> */}
-            <Link
-              href="/"
-              className={`font-old-london p-3 text-2xl  duration-300w-10 h-10 flex items-center justify-center rounded-full bg-background/90 text-primary transition-colors ${
-                isScrolled || pathname !== "/" ? "text-primary" : "text-primary"
-              }`}
-            >
-              X100
+            <Link href="/" className="flex items-center">
+              <span className="inline-flex items-center justify-center w-12 h-12">
+                <img src="/Logo.webp" alt="Chayachobi Logo" className="w-12 h-12 object-cover rounded-lg" />
+              </span>
             </Link>
           </div>
         
